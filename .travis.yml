@@ -3,8 +3,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t DaveHsu/docker-react -f Dockerfile.dev .
+  - docker build -t testimg -f Dockerfile.dev .
 
 script:
-  - docker run DaveHsu/docker-react npm run test -- --coverage
+  - docker run testimg npm run test -- --coverage
 
